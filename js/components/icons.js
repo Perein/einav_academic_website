@@ -1,3 +1,2 @@
-import Icons from "../icons.js";
-export { Icons };
+export const Icons = {};
 export default Icons;

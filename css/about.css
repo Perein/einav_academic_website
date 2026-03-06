@@ -1,147 +1,110 @@
 /* =========================================================
-   ABOUT.CSS (FINAL) – for the new About HTML layout
+   ABOUT.CSS – clean version for current about.html
    Works with:
-   <main class="container about-page"> ... </main>
+   <div class="container page-about">
    ========================================================= */
 
-/* Page container */
-main.container.about-page{
+.page-about {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.25rem 1rem 2rem;
+  padding: 2rem 1.5rem 3rem;
 }
 
-/* Titles + lead */
-main.container.about-page .about-title{
-  margin: 0 0 0.75rem 0;
-}
-
-main.container.about-page .about-lead{
-  margin: 0 0 1rem 0;
-  line-height: 1.7;
-  font-size: 1.05rem;
-  opacity: 0.96;
-}
-
-main.container.about-page .about-subtitle{
-  margin: 1.25rem 0 0.6rem 0;
-}
-
-/* =========================================================
-   HERO: Biography left, Photo + CV right
-   ========================================================= */
-main.container.about-page .about-hero{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  margin: 1.5rem 0 1.25rem 0;
-}
-
-main.container.about-page .about-hero__bio{
-  flex: 1 1 65%;
-  min-width: 280px;
-}
-
-main.container.about-page .about-hero__side{
-  flex: 0 0 340px;
-  max-width: 340px;
-}
-
-main.container.about-page .about-photo{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* Buttons */
-main.container.about-page .about-actions{
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-main.container.about-page .about-btn{
-  display: inline-block;
-  padding: 0.65rem 0.95rem;
-  border-radius: 10px;
-  text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.18);
-}
-
-main.container.about-page .about-btn--secondary{
-  opacity: 0.92;
-}
-
-/* Bullets (important: many themes remove bullets globally) */
-main.container.about-page .about-bullets{
-  margin: 1rem 0 0 1.1rem;
+/* Hero */
+.about-hero {
   padding: 0;
-  list-style: disc;
+  margin-bottom: 2rem;
 }
 
-main.container.about-page .about-bullets li{
-  margin: 0.4rem 0;
+.about-hero__grid,
+.about-hero__grid--single {
+  display: block;
+  max-width: 900px;
 }
 
-/* =========================================================
-   BELOW HERO: cards
-   ========================================================= */
-main.container.about-page .about-sections{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.about-hero__text {
+  max-width: 900px;
+}
+
+.about-hero__text h1,
+.about-hero h1 {
+  font-family: Roboto, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 56px !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
+}
+
+.about-hero__subtitle {
+  max-width: 850px;
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.about-hero__actions {
+  display: flex;
   gap: 1rem;
-  margin-top: 1.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-main.container.about-page .about-card{
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 12px;
-  padding: 1rem 1.1rem;
+/* Prose */
+.prose {
+  max-width: 900px;
 }
 
-main.container.about-page .about-card h3{
-  margin-top: 0;
+.prose h2 {
+  font-family: Roboto, sans-serif !important;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2rem 0 1rem;
+}
+
+.prose p {
+  font-family: Roboto, sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.research-list {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.research-list li {
+  font-family: Roboto, sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
-main.container.about-page .about-card ul{
-  margin: 0.5rem 0 0 1.1rem;
-  padding: 0;
-  list-style: disc;
-}
-
-main.container.about-page .about-card li{
-  margin: 0.35rem 0;
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-@media (max-width: 900px){
-  main.container.about-page .about-hero{
-    flex-direction: column;
+/* Mobile */
+@media (max-width: 768px) {
+  .page-about {
+    padding: 1.5rem 1rem 2.5rem;
   }
 
-  main.container.about-page .about-hero__side{
-    max-width: 520px;
-    width: 100%;
+  .about-hero__text h1,
+  .about-hero h1 {
+    font-size: 42px !important;
   }
 
-  main.container.about-page .about-sections{
-    grid-template-columns: 1fr;
+  .about-hero__subtitle,
+  .prose p,
+  .research-list li {
+    font-size: 18px;
   }
 
-.about-hero__text h1 {
-  font-family: var(--font-main, inherit);
-  font-weight: 700;
-  font-size: 48px;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-}
-.about-hero__grid--single {
-  grid-template-columns: 1fr;
-  max-width: 900px;
+  .prose h2 {
+    font-size: 28px;
+  }
 }

@@ -624,16 +624,16 @@ footer h2{
 	margin-top: 35px;
 	margin-bottom: 35px;
 }
-
-.breadcrumb-page li{
-	display: inline;
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 150%;
-	color: #5A67D8;
+.breadcrumb-page li {
+  display: inline;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5A67D8;
 }
+
 
 .breadcrumb-page li+li:before{
 	padding: 8px;
@@ -2850,7 +2850,7 @@ margin: 0px 0px;
 /* headings */
 .footer-col h3,
 .footer-col h4 {
-  font-family: "Playfair Display", serif;
+  font-family: inherit;   /* use body font (Roboto) */
   font-weight: 600;
   margin: 0 0 14px 0;
 }
@@ -3439,3 +3439,20 @@ h1, h2, h3 {
   background-color: #1f2937;
   color: #fff;
 }
+/* Footer headings: use body font (override) */
+.site-footer .footer-col h3,
+.site-footer .footer-col h4 {
+  font-family: Roboto, sans-serif !important;
+}
+/* ===== FOOTER FONT OVERRIDE (LAST RULE WINS) ===== */
+.site-footer,
+.site-footer * {
+  font-family: Roboto, sans-serif !important;
+}
+
+.site-footer h3,
+.site-footer h4 {
+  font-family: Roboto, sans-serif !important;
+  font-weight: 600;
+}
+/* =============================================== */

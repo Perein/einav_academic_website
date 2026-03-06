@@ -133,4 +133,15 @@ main.container.about-page .about-card li{
   main.container.about-page .about-sections{
     grid-template-columns: 1fr;
   }
+
+.about-hero__text h1 {
+  font-family: var(--font-main, inherit);
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.about-hero__grid--single {
+  grid-template-columns: 1fr;
+  max-width: 900px;
 }

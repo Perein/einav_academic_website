@@ -33,17 +33,22 @@ async function fetchFirstOk(urls) {
 
 /* ---------------- HEADER / FOOTER ---------------- */
 
-async function loadHeader() {
-  const header = document.getElementById("header");
-  if (!header) return;
+async function loadFooter() {
+  const footer = document.getElementById("footer");
+  if (!footer) return;
 
   const { html } = await fetchFirstOk([
-    "/components/header.html",
-    "components/header.html",
-    "./components/header.html",
+    "/components/footer.html",
+    "/blog/components/footer.html",
+    "components/footer.html",
+    "./components/footer.html",
+    "../components/footer.html",
   ]);
 
-  header.innerHTML = html;
+  footer.innerHTML = html;
+
+  const yearEl = document.querySelector(".footer-year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
 async function loadFooter() {

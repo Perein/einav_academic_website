@@ -360,3 +360,15 @@
     display: none;
   }
 }
+.site-footer .footer-contact span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.site-footer .footer-socials a {
+  font-family: Roboto, sans-serif !important;
+  font-weight: 700;
+  font-size: 18px;
+}

@@ -6,12 +6,19 @@
     <h2 id="lecturer-name-template">Einav Peretz-Andersson</h2>
 
     <div class="input-group input-group-mobile">
-      <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input" />
+      <input
+        class="form-control py-2 border-left-0 border"
+        placeholder="Search"
+        type="search"
+        id="search_input"
+      />
       <span class="input-group-append">
-        <button id="header-search-btn"
-                class="btn btn-outline-secondary border-left-0 border search-menu-btn"
-                type="button"
-                onclick="searchPage && searchPage();">
+        <button
+          id="header-search-btn"
+          class="btn btn-outline-secondary border-left-0 border search-menu-btn"
+          type="button"
+          onclick="searchPage && searchPage();"
+        >
           <i class="fa fa-search"></i>
         </button>
       </span>
@@ -19,28 +26,27 @@
 
     <a class="mobile-menu-link-home" href="/index.html">Einav Peretz-Andersson</a>
 
-    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/about.html">About</a></div>
-    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/publications.html">Publications</a></div>
-    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/research.html">Research</a></div>
-    <div class="mobile-menu-link"><a class="mobile-menu-link" href="/teaching.html">Courses</a></div>
-    <!-- <div class="mobile-menu-link"><a class="mobile-menu-link" href="/blog.html">Blog</a></div> -->
-<!-- <div class="mobile-menu-link"><a class="mobile-menu-link" href="/lab.html">Lab</a></div> -->
-
+    <a class="mobile-menu-link" href="/about.html">About</a>
+    <a class="mobile-menu-link" href="/publications.html">Publications</a>
+    <a class="mobile-menu-link" href="/research.html">Research</a>
+    <a class="mobile-menu-link" href="/courses.html">Courses</a>
   </div>
 </div>
 
-<!-- Desktop header bar (NO bootstrap needed) -->
+<!-- Desktop header -->
 <nav class="navbar main-nav">
   <div class="spacer"></div>
 
-  <!-- Brand (Home) -->
+  <!-- Brand -->
   <a class="logo" href="/index.html">
-    <button class="hamburger hamburger--collapse"
-            type="button"
-            aria-label="Menu"
-            aria-controls="mobile-menu"
-            onclick="document.getElementById('mobile-menu').style.marginLeft='0px';
-                     document.getElementById('mobile-menu-bg').style.marginLeft='0px';">
+    <button
+      class="hamburger hamburger--collapse"
+      type="button"
+      aria-label="Menu"
+      aria-controls="mobile-menu"
+      onclick="document.getElementById('mobile-menu').style.marginLeft='0px';
+               document.getElementById('mobile-menu-bg').style.marginLeft='0px';"
+    >
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
@@ -50,24 +56,28 @@
 
   <!-- Menu links -->
   <div class="menu">
-    <a class="nav-link" href="/about.html">About</a>
-    <a class="nav-link" href="/publications.html">Publications</a>
-    <a class="nav-link" href="/research.html">Research</a>
-    <a class="nav-link" href="/teaching.html">Courses</a>
-   <!-- <a class="nav-link" href="/blog.html">Blog</a> -->
-<!-- <a class="nav-link" href="/lab.html">Lab</a> -->
-
+    <a class="nav-link menu-main-link" href="/about.html">About</a>
+    <a class="nav-link menu-main-link" href="/publications.html">Publications</a>
+    <a class="nav-link menu-main-link" href="/research.html">Research</a>
+    <a class="nav-link menu-main-link" href="/courses.html">Courses</a>
   </div>
 
   <!-- Search -->
   <div class="header-search">
     <div class="input-group">
-      <input class="form-control py-2 border-left-0 border" placeholder="Search" type="search" id="search_input_mobile" />
+      <input
+        class="form-control py-2 border-left-0 border"
+        placeholder="Search"
+        type="search"
+        id="search_input_mobile"
+      />
       <span class="input-group-append">
-        <button id="header-search-btn"
-                class="btn btn-outline-secondary border-left-0 border search-menu-btn"
-                type="button"
-                onclick="searchPage && searchPage();">
+        <button
+          id="header-search-btn"
+          class="btn btn-outline-secondary border-left-0 border search-menu-btn"
+          type="button"
+          onclick="searchPage && searchPage();"
+        >
           <i class="fa fa-search"></i>
         </button>
       </span>

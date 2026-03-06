@@ -200,4 +200,8 @@ h1, h2, h3 {
 .site-footer .footer-col nav {
   display: block;
 }
-
+.site-footer i.fa {
+  font-family: FontAwesome !important;
+  font-style: normal;
+  font-weight: normal;
+}

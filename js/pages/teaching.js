@@ -123,14 +123,14 @@ function courseCardHtml(c) {
   return `
     <article class="card">
       <h3 style="margin-bottom:.35rem;">
-        <a href="/course-page.html?course_id=${encodeURIComponent(code)}" style="text-decoration:none;">
+        <a href="/teaching.html?course_id=${encodeURIComponent(code)}" style="text-decoration:none;">
           ${escapeHtml(name)}
         </a>
       </h3>
       <p class="small" style="margin:0 0 .5rem 0; opacity:.85;">${meta}</p>
       ${desc ? `<p style="margin:0; max-width:90ch;">${desc}</p>` : ""}
       <p style="margin-top:.75rem;">
-        <a class="btn btn--ghost" href="/course-page.html?course_id=${encodeURIComponent(code)}">
+        <a class="btn btn--ghost" href="/teaching.html?course_id=${encodeURIComponent(code)}">
           Open course page
         </a>
       </p>

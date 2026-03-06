@@ -1,12 +1,11 @@
 // /js/main.js
-// Inject header + footer on every page (safe, async)
+// Inject header + footer on every page
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     await loadHeader();
     await loadFooter();
 
-    // After header/footer are injected:
     activeMenuLink();
     manageCollapsible();
     bindAlertClose();
@@ -31,26 +30,23 @@ async function fetchFirstOk(urls) {
   throw new Error("All fetch attempts failed: " + urls.join(" OR "));
 }
 
-/* ---------------- HEADER / FOOTER ---------------- */
+/* ---------------- HEADER ---------------- */
 
-async function loadFooter() {
-  const footer = document.getElementById("footer");
-  if (!footer) return;
+async function loadHeader() {
+  const header = document.getElementById("header");
+  if (!header) return;
 
   const { html } = await fetchFirstOk([
-    "/components/footer.html",
-    "/blog/components/footer.html",
-    "components/footer.html",
-    "./components/footer.html",
-    "../components/footer.html",
+    "/components/header.html",
+    "components/header.html",
+    "./components/header.html",
   ]);
 
-  footer.innerHTML = html;
-
-  const yearEl = document.querySelector(".footer-year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  header.innerHTML = html;
 }
 
+/* ---------------- FOOTER ---------------- */
+
 async function loadFooter() {
   const footer = document.getElementById("footer");
   if (!footer) return;
@@ -63,7 +59,6 @@ async function loadFooter() {
 
   footer.innerHTML = html;
 
-  // Set year AFTER footer HTML is injected
   const yearEl = document.querySelector(".footer-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }

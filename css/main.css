@@ -313,3 +313,50 @@
     height: 150px !important;
   }
 }
+/* ===== CLEAN HEADER FIX ===== */
+.main-nav {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  background: #1A202C !important;
+}
+
+.main-nav .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 24px;
+}
+
+.main-nav .header-search {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav .logo {
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.main-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+  color: #667EEA;
+}
+
+#header .form-control {
+  min-width: 280px;
+}
+
+@media (max-width: 850px) {
+  .main-nav .menu,
+  .main-nav .header-search {
+    display: none;
+  }
+}
